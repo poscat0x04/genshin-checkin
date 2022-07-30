@@ -24,13 +24,13 @@ async def main():
         try:
             result = await client.claim_daily_reward()
         except genshin.AlreadyClaimed:
-            print("You have already checked in")
+            print("You have already checked in.")
             return 0
         except genshin.InvalidCookies:
-            print("Failed to check in, cookies are not valid")
+            print("Failed to check in, cookies are not valid.")
             return 1
         else:
-            print(f"Successfully check in. Got {result.amount} {result.name}")
+            print(f"Successfully checked in. Got {result.amount} {result.name}(s).")
 
 
 if __name__ == "__main__":

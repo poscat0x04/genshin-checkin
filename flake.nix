@@ -1,5 +1,5 @@
 {
-  description = "THU Daily Health Report Script";
+  description = "Hoyolab Genshin daily check in script";
 
   inputs = {
     nixpkgs.url = github:poscat0x04/nixpkgs/dev;
@@ -28,7 +28,7 @@
 
         doCheck = false;
       };
-      genshin-checkin = prev.writers.writePython3 "thu-checkin.py"
+      genshin-checkin = prev.writers.writePython3 "genshin-checkin.py"
         {
           libraries = [ final.genshin-py ];
           flakeIgnore = [ "E501" ];
