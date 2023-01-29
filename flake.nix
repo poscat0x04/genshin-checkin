@@ -10,11 +10,11 @@
     overlay = final: prev: {
       genshin-py = with final; with pkgs.python3Packages; buildPythonPackage rec {
         pname = "genshin";
-        version = "1.2.2";
+        version = "1.5.0";
 
         src = fetchPypi {
           inherit pname version;
-          sha256 = "sha256-PugJ1Y8757s7zRdTWy1PJqIX94y4meKqozefpVj+RY0=";
+          sha256 = "sha256-gx40KP/jBpnvyJl4Gu+iXnWRbRxRBUhQPfuR+7BxTa8=";
         };
 
         buildInputs = [
@@ -80,6 +80,7 @@
       packages = {
         inherit (pkgs) genshin-py genshin-checkin;
       };
+      defaultPackage = pkgs.genshin-checkin;
       devShell = with pkgs; mkShell {
         buildInputs = [
           mypy
