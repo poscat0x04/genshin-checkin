@@ -2,8 +2,8 @@
   description = "Hoyolab Genshin daily check in script";
 
   inputs = {
-    nixpkgs.url = github:poscat0x04/nixpkgs/dev;
-    flake-utils.url = github:poscat0x04/flake-utils;
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.11";
+    flake-utils.url = "github:poscat0x04/flake-utils";
   };
 
   outputs = { self, nixpkgs, flake-utils }: {
