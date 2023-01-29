@@ -55,7 +55,7 @@
         config = lib.mkIf cfg.enable {
           systemd = {
             services.genshin-checkin = {
-              after = [ "network-online.target" ];
+              after = [ "network-online.target" "nss-lookup.target" ];
               serviceConfig = {
                 Type = "oneshot";
                 ExecStart = "${pkgs.genshin-checkin} -c ${configFile}";
