@@ -66,6 +66,7 @@
               timerConfig = {
                 RandomizedDelaySec = "1h";
                 OnCalendar = "*-*-* 8:00:00 CST";
+                AccuracySec = "30min";
                 Persistent = true;
               };
             };
